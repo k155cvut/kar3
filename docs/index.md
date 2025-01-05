@@ -1,11 +1,9 @@
 
-# GIS 1 {: .page_title}
+# Kartografie 3 {: .page_title}
 
-Předmět vás seznámí se základy tzv. __geografických informačních systémů__ (GIS). GIS je soubor nástrojů sloužících ke __sběru__, __správě__, __analýze__ a __vizualizaci__ geografických dat. Umožňuje efektivně pracovat s prostorovými informacemi, což zahrnuje __mapy__, __satelitní snímky__, __adresy__, __topografické údaje__ a mnoho dalšího. Dokáže provádět složité analýzy, identifikovat vzory, a tím __lépe porozumět geografickým jevům a vztahům__.
+Předmět naváže na základy kartografické tvorby a seznámí vás s __kartografií více do hloubky__, zaměřenou více na syntézu s dalšími daty a na sdílení obsahu. Kartografie v moderním pojetí využívá různých cloudových řešení nebo webových služeb pro distribuci map po sítích.
 
-GIS má široké uplatnění, od __městského plánování__, přes __správu přírodních zdrojů__ až po __krizový management__. Je nepostradatelným nástrojem pro efektivní rozhodování a řízení v různých odvětvích a pomáhá lépe pochopit složité geografické souvislosti.
-
-GIS 1 je v tomto tématu úvodním kurzem. Zatímco přednášky vás provedou základní teorií, cvičení se věnují praktickému ovládání GIS software – zejména porozumění práce s daty a provádění jednodušších analýz. Během výuky je používán software __:simple-arcgis: Esri ArcGIS Pro__{: style="white-space: nowrap;"}, ke konci kurzu bude pak věnován prostor i možným alternativám (program __:simple-qgis: QGIS__).
+Přednášky vás provedou rozšířenou teorií mapového jazyka s důrazem na základy internetu, protokolů a formátů zde využívaných, a dotknou se problematiky webové kartografie a sdílení geodat v prostoru internetu. Během výuky je používán software __:simple-arcgis: ArcGIS Pro__{: style="white-space: nowrap;"}.
 
 <h2 style="text-align:center;">Naučíte se</h2>
 <!-- styl je zde pridany HTML tagem (ne pomoci '##'), aby se text neobjevil v tabulce obsahu vlevo na strance -->
@@ -75,20 +73,23 @@ GIS 1 je v tomto tématu úvodním kurzem. Zatímco přednášky vás provedou z
 účast doporučená
 {: style="opacity:50%;margin-top:0;"}
 
-![](https://geomatics.fsv.cvut.cz/wp-content/uploads/2022/01/03-edit_export@0.5x-2.jpg){: .off-glb .no-filter style="height: 1.5em; vertical-align: -.4em; clip-path: circle();"} 
-__prof. Ing. Lena Halounová, CSc.__
+<!--![](https://geomatics.fsv.cvut.cz/wp-content/uploads/2022/01/03-edit_export@0.5x-2.jpg){: .off-glb .no-filter style="height: 1.5em; vertical-align: -.4em; clip-path: circle();"} -->
+__Ing. Tomáš Janata, Ph.D.__ | __prof. Ing. Jiří Cajthaml, Ph.D.__
 
-1. Definice GIS, informatika, základní pojmy, aplikační oblasti GIS, prostor, topologie, historie GIS
-2. Reálný svět × GIS, model v GIS, vztahy objektů, typy modelů, geometrické typy objektů, rozlišovací schopnost
-3. Geografická poloha v GIS, prostorové vztahy, atributy
-4. Čas v GIS, modelování, druhy modelů, chyby v modelování v GIS
-5. Vektorový a rastrový GIS, datová struktura
-6. Rastrový GIS, atributová data
-7. Vektorový GIS, druhy objektů
-8. Geometrické a topologické vlastnosti objektů ve vektorovém GIS
-9. Vektorová a rastrová reprezentace prostorových objektů
-10. Rastrová reprezentace prostorových objektů, způsob ukládání rastrových objektů
+1. Pokročilé techniky tematických map
+2. Generalizace
+3. Historie internetu
+4. Internet a webové mapové služby
+5. XML a geoinformační standardy z něj odvozené (GML, SVG, KML)
+6. Dlaždicovaná data
+7. Zdroje dat, open data, statistická data, metadata, INSPIRE, CSW služby
+8. Tvorba mapy, sazba, datové modely
+9. Seriál Chyby v mapách
+10. Webová kartografie, specifika, API, cloudová řešení
+11. Trendy v GIS – 3D aplikace, streetview, cloud, crowdsourcing
+12. Prezentace semestrální práce
 
+<!--
 ## Harmonogram {: style="margin-bottom:0;"}
 
 [![](./assets/index/schedule.svg#only-light){.off-glb .no-filter}](https://kos.cvut.cz/schedule/course/1551GIS/semester/B232){target="_blank"}
@@ -99,4 +100,4 @@ __prof. Ing. Lena Halounová, CSc.__
 [Stránka předmětu v :custom-kos-logo-img-BW:{.middle style="margin-left:3px;"} :custom-kos-logo-BW:{.xl .middle}](https://kos.cvut.cz/course-syllabus/1551GIS/B232){ .md-button .md-button--primary target="_blank"}
 {align=center}
 
-<br>
+<br> -->
