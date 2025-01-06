@@ -1,4 +1,4 @@
-# Kartografická anamorfóza
+# Pokročilé metody tematické kartografie
 
 ## Zadání 
 
