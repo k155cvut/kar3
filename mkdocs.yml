@@ -10,7 +10,7 @@ nav:
   # - Hodnocení: hodnoceni.md
   - Semestrální práce – mapová aplikace: semestralka.md
   # - Výuková videa: videa.md
-  # - Kvíz: quiz.md
+  - Pokročilé metody TK: advanced.md 
 plugins:
   - search
   - glightbox:
