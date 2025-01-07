@@ -1,5 +1,22 @@
 # Pokročilé metody TK (JM+PJ)
 
+### Pokročilé areálové metody
+#### Dasymetrická metoda
+#### Value-by-alpha
+
+### Pokročilé kartodiagramy
+#### Waffle
+#### Coxcombs
+
+### Kartografická anamorfóza
+Podstatou kartografické anamorfózy je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
+
+Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
+
+Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Níže jsou popsány vybrané specifické typy a jejich tvorba v softwaru GIS.
+
+#### Spojitá geografická anamorfóza
+
 **Mapa 3 – plošná geografická spojitá anamorfóza (QGIS)**
 
 -   generalizace hranic vrstvy obcí *(Simplify Polygon)*
@@ -18,8 +35,7 @@
 -   měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! - !shape_Area_ORP!/1000000)` výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu (Insert-Graphics)
 -   do legendy přidáme také symboly pro původní a anamorfované hranice obcí
 
-**Mapa 4 – Schematická (Dorlingova/Demersova) anamorfóza (ArcGIS Pro)**
-
+#### Schematická (negeografická) Dorlingova anamorfóza
 
 -   download toolboxu [Graphical Cartogram](https://carto.maps.arcgis.com/home/item.html?id=f36049083ce947b08935a67f7184863d) z Esri galerie.
 -   přidání staženého toolboxu do projektu ArcGIS Pro (*Toolbox – Add New*)
@@ -29,7 +45,7 @@
 -   dále je potřeba nastavit barvu pro výplň jednotlivých kruhů (analogicky k předchozím mapám), avšak nástroj *Create Cartogram* bohužel nezachovává veškeré atributy původní vrstvy, proto je nutné nejprve pomocí *Join* připojit informace o procentním rozdílu ve výsledku volebních kandidátů z původní vrstvy obcí (připojit obce a jejich anamorfované verze na základě ID, které zůstává nezměněno).
 -   legendu vytvořte pomocí nástroje <https://radiat.pythonanywhere.com/> (export do SVG a v layoutu vložit jako grafický objekt; poté nesmíte měnit velikost, aby byla legenda platná!)
 
-**Mapa 5 – Multivariate mapping**
+### Multivariate mapping
 
 -   jako podklad využijeme kvalifikační kartogram (mapa 1)
 -   k vrstvě obcí přidáme data o vítězi prvního kola z [databáze ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1) (nutná úprava v Excelu, ke každé obci stačí vhodnou funkcí vypočíst jméno vítěze 1. kola prezidentské volby)
@@ -42,10 +58,3 @@
 -   Ve vlastnostech symbolu propojit *Color* s atributem obsahujícím definovaný název barvy pro vítěze 1. kola\
 -   zvolit vhodnou minimální a maximální velikost symbolu
 -   přidat anotace, vytvořit legendu a dokončit layout
-
-
-### Anamorfózy
-### Multivariate mapping
-### Kartodiagramy
-#### Waffle
-#### Coxcombs

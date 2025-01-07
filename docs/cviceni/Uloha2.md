@@ -8,9 +8,19 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 1.  **Mapa 1** bude s využitím jednoduchého kvalifikačního/klasifikačního kartogramu zobrazovat vybraný jev (**náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
+<figure markdown>
+  ![Mapa 1](../assets/Uloha2/Kartogram.png "Mapa 1"){ width=400px }
+  <figcaption>Mapa 1</figcaption>
+</figure>
+
 2.  **Mapa 2** bude s využitím plošné geografické spojité anamorfózy obrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 3.  **Mapa 3** bude s využitím plošné schematické (tzv. Dorlingovy) anamorfózy zobrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
+
+<figure markdown>
+  ![Mapa 3](../assets/Uloha2/Kartogram.png "Mapa 3"){ width=400px }
+  <figcaption>Mapa 3</figcaption>
+</figure>
 
 4.  **Mapa 4** bude s využitím kartogramu a plošného kartodiagramu zobrazovat vybraný jev (**náskok vítěze v %, počet platných voličských hlasů, volební účast v % a vítěze 1.  kola**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
