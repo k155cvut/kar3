@@ -16,22 +16,22 @@ Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlo
 Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Obrázky níže vystihují rozdíly mezi základními druhy a dále následuje popis tvorby vybraných v softwaru GIS.
 
 <figure markdown>
-  ![Mapa 1](../assets/Uloha2/area.png "Mapa 1"){ width=400px }
+  ![Mapa 1](../assets/Uloha2/area.png "Mapa 1"){ width=800px }
   <figcaption>Spojitá geografická a schematická anamorfóza (tzv. gridded cartogram)</figcaption>
 </figure>
 
 <figure markdown>
-  ![Mapa 1](../assets/Uloha2/geograficka.png "Mapa 1"){ width=400px }
+  ![Mapa 1](../assets/Uloha2/geograficka.png "Mapa 1"){ width=500px }
   <figcaption>Rozdíly mezi geografickou spojitou a nespojitou anamorfózou</figcaption>
 </figure>
 
 <figure markdown>
-  ![Mapa 1](../assets/Uloha2/dorlin-demers.png "Mapa 1"){ width=400px }
+  ![Mapa 1](../assets/Uloha2/dorling-demers.png "Mapa 1"){ width=500px }
   <figcaption>Rozdíl mezi kartodiagramem a Dorlingovou, resp. Demersovou schematickou anamorfózou</figcaption>
 </figure>
 
 <figure markdown>
-  ![Mapa 1](../assets/Uloha2/radial.png "Mapa 1"){ width=400px }
+  ![Mapa 1](../assets/Uloha2/radial.png "Mapa 1"){ width=500px }
   <figcaption>Radiální anamorfóza</figcaption>
 </figure>
 
