@@ -9,11 +9,31 @@
 #### Coxcombs
 
 ### Kartografická anamorfóza
-Podstatou kartografické anamorfózy je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
+Podstatou kartografické anamorfózy (ang. *cartogram*) je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
 
 Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
 
-Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Níže jsou popsány vybrané specifické typy a jejich tvorba v softwaru GIS.
+Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Obrázky níže vystihují rozdíly mezi základními druhy a dále následuje popis tvorby vybraných v softwaru GIS.
+
+<figure markdown>
+  ![Mapa 1](../assets/Uloha2/area.png "Mapa 1"){ width=400px }
+  <figcaption>Spojitá geografická a schematická anamorfóza (tzv. gridded cartogram)</figcaption>
+</figure>
+
+<figure markdown>
+  ![Mapa 1](../assets/Uloha2/geograficka.png "Mapa 1"){ width=400px }
+  <figcaption>Rozdíly mezi geografickou spojitou a nespojitou anamorfózou</figcaption>
+</figure>
+
+<figure markdown>
+  ![Mapa 1](../assets/Uloha2/dorlin-demers.png "Mapa 1"){ width=400px }
+  <figcaption>Rozdíl mezi kartodiagramem a Dorlingovou, resp. Demersovou schematickou anamorfózou</figcaption>
+</figure>
+
+<figure markdown>
+  ![Mapa 1](../assets/Uloha2/radial.png "Mapa 1"){ width=400px }
+  <figcaption>Radiální anamorfóza</figcaption>
+</figure>
 
 #### Spojitá geografická anamorfóza
 
