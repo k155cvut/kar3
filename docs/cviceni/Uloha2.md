@@ -15,6 +15,11 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 2.  **Mapa 2** bude s využitím plošné geografické spojité anamorfózy obrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
+<figure markdown>
+  ![Mapa 2](../assets/Uloha2/Spojita.png "Mapa 2"){ width=400px }
+  <figcaption>Mapa 2</figcaption>
+</figure>
+
 3.  **Mapa 3** bude s využitím plošné schematické (tzv. Dorlingovy) anamorfózy zobrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
@@ -24,9 +29,14 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 4.  **Mapa 4** bude s využitím kartogramu a plošného kartodiagramu zobrazovat vybraný jev (**náskok vítěze v %, počet platných voličských hlasů, volební účast v % a vítěze 1.  kola**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
-5.  **Mapa 5** waffle
+<figure markdown>
+  ![Mapa 4](../assets/Uloha2/Multi.png "Mapa 4"){ width=400px }
+  <figcaption>Mapa 4</figcaption>
+</figure>
 
-6.  **Mapa 6** coxcombs
+5.  **Mapa 5** bude s využitím kartogramu a kartodiagramu zobrazovat **volební účast v krajích a výsledky voleb do poslanecké sněmovny.**
+
+6.  **Mapa 6** bude s využitím kartogramu a kartodiagramu zobrazovat **aktuální míru nezaměstnanosti a vývoj růstu mezd a průměrné ceny bytů za kvartály v krajích pro období posledních 4 let.**
 
 **Zdroje dat:**\
 
