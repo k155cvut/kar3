@@ -39,14 +39,14 @@ Pro **zvýraznění každé páté vrstevnice** (tedy např. pro vrstevnice po 2
 
 ### Aplikace popisu
 
-Pro **aplikaci popisu** použijeme nástroje popsané např. [v tomto samostatném návodu](../../kar2/docs/popisy). V okně *Label Class* nastavíme popis z pole *VYSKA*, zvolíme vhodné písmo, velikost a barvu (měla by odpovídat barvě samotných vrstevnic). Důležité je také nastavení umístění popisků podél vrstevnic. Vhodné je použít styl umístění *Contour* a případně upravit.
+Pro **aplikaci popisu** použijeme nástroje popsané např. [v tomto samostatném návodu](../../kar2/popisy). V okně *Label Class* nastavíme popis z pole *VYSKA*, zvolíme vhodné písmo, velikost a barvu (měla by odpovídat barvě samotných vrstevnic). Důležité je také nastavení umístění popisků podél vrstevnic. Vhodné je použít styl umístění *Contour* a případně upravit.
 
 !!! note
     Pozor, vrstevnice podléhají specifickým konvencím pro jejich popisování. Není vhodné použít volbu *Laddering*, kterou ArcGIS implicitně zapíná – popisy se pak příliš shlukují do několika málo oblastí mapy.
 
 ### Export v měřítku na papír
 
-Pro **export mapy** v daném měřítku na formát A4 použijeme *Layout*. Vytvoříme nový *Layout* ve formátu A4. Přidáme mapu do layoutu a nastavíme měřítko na 1 : 10 000. Následně exportujeme layout do požadovaného formátu PDF. Více v [podrobnějším postupu](../../kar2/docs/layout)
+Pro **export mapy** v daném měřítku na formát A4 použijeme *Layout*. Vytvoříme nový *Layout* ve formátu A4. Přidáme mapu do layoutu a nastavíme měřítko na 1 : 10 000. Následně exportujeme layout do požadovaného formátu PDF. Více v [podrobnějším postupu](../../kar2/layout)
 
 <figure markdown>
   ![Radiální anamorfóza](../assets/Uloha2/radial.png "Radiální anamorfóza"){ width=500px }
