@@ -8,27 +8,29 @@
 - **mapa II**: ohniska rekreace v okresech \[metoda intenzity jevu; formát A4\];
 - **mapa III**: hustota obyvatelstva \[dasymetrická metoda; formát A3\]. 
 
-**Jednotlivá zadání:**
+!!! tip
 
--   Bořík – Jičín
--   Černohousová – Semily
--   Hádlík – Rakovník
--   Klimeš – Strakonice
--   Kovář – Nymburk
--   Mihal – Tachov
--   Mlejnek – Teplice
--   Nedoma – Kutná Hora
--   Pokorný – Kladno
--   Rabasová – Mělník
--   Roučka – Jihlava
--   Sedlák – Uherské Hradiště
--   Slabá – Kroměříž
--   Soukupová – Písek
--   Šimek – Tábor
--   Tomášková – Beroun
--   Turek – Blansko
--   Zbíral – Svitavy
--   \<volné\> – Hradec Králové
+    **Jednotlivá zadání:**
+
+    -   Bořík – Jičín
+    -   Černohousová – Semily
+    -   Hádlík – Rakovník
+    -   Klimeš – Strakonice
+    -   Kovář – Nymburk
+    -   Mihal – Tachov
+    -   Mlejnek – Teplice
+    -   Nedoma – Kutná Hora
+    -   Pokorný – Kladno
+    -   Rabasová – Mělník
+    -   Roučka – Jihlava
+    -   Sedlák – Uherské Hradiště
+    -   Slabá – Kroměříž
+    -   Soukupová – Písek
+    -   Šimek – Tábor
+    -   Tomášková – Beroun
+    -   Turek – Blansko
+    -   Zbíral – Svitavy
+    -   \<volné\> – Hradec Králové
     
 
 Využijte data RÚIAN, do kterého se z katastru nemovitostí přenášejí mj. údaje o parcelách a stavebních objektech (v příp. ArcGIS Pro možno využít službu ArcGIS serveru na [***ags.cuzk.cz \> RUIAN \> Prohlizeci sluzba nad daty RUIAN***](http://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer){target="_blank"}, kterou je možné stáhnout pomocí *Select* za vybrané území okresu, příp. nastavte *Processing Extent* v *Environments*).
@@ -60,10 +62,10 @@ Specifikem vizualizace pomocí intenzitní mapy (na rozdíl např. od geostatist
 
 *Jako podklad použijte data ZSJ z RÚIAN (dostupné na na disku S: pod katedrou ve složce Data\\ArcGIS\\ZSJ+CLC.gdb)*. K nim je třeba pomocí funkce *Add join* připojit atribut s počty obyvatel. Databázové soubory DBF s daty základních sídelních jednotek včetně počtů obyvatel naleznete na webu ČSÚ v sekci [RSO (Registr sčítacích obvodů)](https://apl2.czso.cz/irso4/export1.jsp?). Zde vyberete:
 
-- Číselník: Základní sídelní jednotky;
-- Omezující podmínka: OKRES \> váš zadaný okres;
-- Výběr sloupců vazeb: žádné;
-- Výběr sloupců atributů: POCOBYOSL2 (obvyklý počet obyv. dle SLDB 2021)
+- Číselník: **Základní sídelní jednotky**;
+- Omezující podmínka: **OKRES \> *váš zadaný okres***;
+- Výběr sloupců vazeb: **žádné**;
+- Výběr sloupců atributů: **POCOBYOSL2** (obvyklý počet obyv. dle SLDB 2021)
 
 a necháte vyexportovat v kódování 1250. Ve sloupci *KOD* takto vytvořeného DBF souboru pak naleznete kód ZSJ, který odpovídá kódu ZSJ ve výše stažené geodatabázi základních sídelních jednotek. Tyto dva atributy je tedy třeba ve funkci *Add join* nastavit jako propojovací. Vrstvu ZSJ můžete omezit na příslušný okres zvolením příslušného kódu okresu (atribut *LAU1_KOD)* např. jako Definition query – tedy např. pro okres Most bude def. query rovno `LAU1_KOD = 'CZ0425'`
 
@@ -84,7 +86,7 @@ Pro plochy volte následující váhy:
 
 Je tedy třeba sloučit tyto skupiny ploch dohromady a do nového atributu uložit příslušnou váhu. Pak pomocí funkce *Union* vytvořit průniky ZSJ a plošek CLC, čímž vzniknou díly ZSJ. Jim se pak nastaví pro každou ZSJ počty obyvatel jednotlivých dílů dle vah.
 
-Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tyto do dílů (existují-li všechny):
+Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tito do dílů (existují-li všechny):
 
 - zástavba – 405 obyvatel;
 - zást. industr. – 10 obyvatel;
@@ -93,21 +95,19 @@ Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tyto do d�
 - lesy – 10 obyvatel;
 - vše ostatní – 0 obyvatel.
 
-Pokud všechny váhy v dané ZSJ neexistují (což nastane většinou), je potřeba pomocí funkce *Summarize Within* přepočítat aktuální váhy vůči součtu těch, které v dané ZSJ jsou přítomné. Tedy např. při vahách jen 0,02 a 0,05 vydělit váhy 0,02 a 0,05 jejich součtem, tedy 0,07. Vzniknou tak normované váhy 0,28 a 0,72. Těmi pak lze násobit počty obyvatel v každém dílu a zjistit odhad skutečného rozložení obyvatel v ploše.
-Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako Summary features vrstvu dílů, kde jako statistiku zvolíte *Sum* (součet). Tím získáte součet vah, nutný pro přepočet vah v atributu *VAHA*.
+Pokud všechny váhy v dané ZSJ neexistují (což nastane většinou), je potřeba pomocí funkce *Summarize Within* přepočítat aktuální váhy vůči součtu těch, které v dané ZSJ jsou přítomné. Tedy např. při vahách jen 0,02 a 0,05 vydělit váhy 0,02 a 0,05 jejich součtem, tedy 0,07. Vzniknou tak normované váhy 0,286 a 0,714. Těmi pak lze násobit počty obyvatel v každém dílu a zjistit odhad skutečného rozložení obyvatel v ploše.
+Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako *Summary features* vrstvu dílů, kde jako statistiku zvolíte *Sum* (součet). Tím získáte součet vah, nutný pro přepočet vah v atributu *VAHA*.
 
-Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený 1 000 000 z důvodu přepočtu na čtvereční kilometr.
+Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený 1 000 000 z důvodu přepočtu na čtvereční kilometr. Díly s nulovou hustotou zůstanou zcela bílé. 
 <br />
 
 !!! warning "K odevzdání"
+    
+    ## Požadované výstupy
 
-### Požadované výstupy
+    -  Nahrát potřebné vrstvy pro Mapu I na AG Online, vytvořit webmapu (Web Map) a pojmenovat ji KAT3_2024\_*iniciály*\_Mapa1.
+    -  Do Moodle vložit Mapu II, resp. III jako PDF ve formátu A4, resp. A3 včetně všech kompozičních prvků.
+    -  Technickou zprávu není třeba zpracovat.
 
--  Nahrát potřebné vrstvy pro Mapu I na AG Online, vytvořit webmapu (Web Map) a pojmenovat ji KAT3_2024\_*iniciály*\_Mapa1.
--  Do Moodle vložit Mapu II, resp. III jako PDF ve formátu A4, resp. A3 včetně všech kompozičních prvků.
--  Technickou zprávu není třeba zpracovat.
-
-
-
-**Termín odevzdání**: pátek 27. prosince 2024, 16 hodin.
+    **Termín odevzdání**: pátek 27. prosince 2024, 16 hodin.
 

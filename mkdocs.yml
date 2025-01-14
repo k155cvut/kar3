@@ -10,6 +10,7 @@ nav:
   # - Hodnocení: hodnoceni.md
   - Semestrální práce – mapová aplikace: semestralka.md
   # - Výuková videa: videa.md
+  - Tvorba digitálních modelů terénu: dmt.md
   - Anamorfní mapy <!--Pokročilé metody TK-->: advanced.md 
 plugins:
   - search
