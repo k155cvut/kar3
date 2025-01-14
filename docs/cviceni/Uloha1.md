@@ -45,6 +45,8 @@ Využitím nástrojů software OCAD a ArcGIS vytvořte:
 -   spočítejte rozdílový model DMT 5G – DMP 1G a klasifikujte u něj vegetaci: <br />
     vytvořte třídy 0 – 0,1 m \| 0,1 – 2 m \| 2 – 4 m \| 4 – 7 m \| 7 – 10 m \| 10 – 15 m \| 15 – 20 m \| nad 20 m.
 
+Můžete využít [návod ke konstrukci vrstevnic z digitálních modelů terénu v prostředí ArcGIS](../dmt.md).
+
 !!! warning "K odevzdání"
 
     ## Požadované výstupy
