@@ -41,7 +41,7 @@ Pro **zvýraznění každé páté vrstevnice** (tedy např. pro vrstevnice po 2
 
 Pro **aplikaci popisu** použijeme nástroje popsané např. [v tomto samostatném návodu](../../kar2/popisy). V okně *Label Class* nastavíme popis z pole *VYSKA*, zvolíme vhodné písmo, velikost a barvu (měla by odpovídat barvě samotných vrstevnic). Důležité je také nastavení umístění popisků podél vrstevnic. Vhodné je použít styl umístění *Contour* a případně upravit.
 
-!!! note
+!!! note "Popis vrstevnic"
     Pozor, vrstevnice podléhají specifickým konvencím pro jejich popisování. Není vhodné použít volbu *Laddering*, kterou ArcGIS implicitně zapíná – popisy se pak příliš shlukují do několika málo oblastí mapy.
 
 ### Export v měřítku na papír
