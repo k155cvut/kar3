@@ -101,6 +101,11 @@ Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako *Summary feature
 Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený 1 000 000 z důvodu přepočtu na čtvereční kilometr. Díly s nulovou hustotou zůstanou zcela bílé. 
 <br />
 
+<figure markdown>
+  ![Dasym](../assets/Uloha4/dasym.png "Dasymetrická mapa – ukázka")
+  <figcaption>Ukázka výsledné dasymetrické mapy. *Nejedná se o kompletní layout*</figcaption>
+</figure>
+
 !!! warning "K odevzdání"
     
     ## Požadované výstupy
