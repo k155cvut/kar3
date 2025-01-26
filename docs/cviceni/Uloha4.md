@@ -102,7 +102,7 @@ Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé
 <br />
 
 <figure markdown>
-  ![Dasym](../assets/Uloha4/dasym.png "Dasymetrická mapa – ukázka")
+  ![Dasym](../assets/Uloha4/dasym.png "Dasymetrická mapa – ukázka"){style="width: 50%"}
   <figcaption>Ukázka výsledné dasymetrické mapy. *Nejedná se o kompletní layout*</figcaption>
 </figure>
 
