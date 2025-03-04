@@ -1,5 +1,4 @@
-# Kartografická anamorfóza
-<!--# Pokročilé metody TK (JM+PJ)
+# Pokročilé metody TK
 
 ### Pokročilé areálové metody
 #### Dasymetrická metoda
@@ -8,8 +7,13 @@
 ### Pokročilé kartodiagramy
 #### Waffle
 #### Coxcombs
+Coxcomb je varianta na pie chart, který vzniká dělením kruhu rovnoměrných segmentů (např. dle počtu časových úseků), s poloměrem (výseče) lišícím se podle kvantity jevu. Výsledkem jsou segmenty, které se liší rozsahem od středu grafu. Obvykle se používá k zobrazení časových jevů v souladu s původním použitím Florence Nightingale v jejím klasickém diagramu úmrtnosti východních armád z roku 1858.
 
-### Kartografická anamorfóza-->
+<figure markdown>
+  ![](../assets/Uloha2/Nightingale-mortality.jpg "Diagram úmrtnosti F. Nightingale"){ width=500px }
+</figure>
+
+### Kartografická anamorfóza
 Podstatou kartografické anamorfózy (ang. *cartogram*) je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
 
 Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
