@@ -9,7 +9,6 @@ nav:
   - Data: data.md
   # - Hodnocení: hodnoceni.md
   - Semestrální práce – mapová aplikace: semestralka.md
-  # - Výuková videa: videa.md
   - Tvorba digitálních modelů terénu: dmt.md
   - Pokročilé metody TK: advanced.md 
 plugins:
