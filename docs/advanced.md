@@ -3,6 +3,13 @@
 ### Pokročilé areálové metody
 #### Dasymetrická metoda
 #### Value-by-alpha
+Autoři metody value-by-alpha map doporučují pro tematickou (barevnou) vrstvu používat stupnici se dvěma až třemi intervaly (v případě divergentního schématu čtyřmi až šesti intervaly). Barvy, použité pro tematickou vrstvu, by neměly mít sytost ani barevnou hodnotu (vyjádřeno v barevném modelu HSV nebo HSL) pod 50 %, neboť v tomto případě by při naložení normalizační vrstvy došlo k poklesu těchto hodnot na nerozlišitelnou úroveň.
+
+Vrstva normalizační by pro dosažení optimálního vzhledu výsledné mapy měla naopak obsahovat větší počet intervalů; autoři doporučují rozmezí pěti až sedmi intervalů. Normalizační vrstva může být tvořena bílou nebo černou barvou (obr. 6.17), přičemž jednotlivé intervaly se navzájem odlišují průhledností: maximální (tedy 0% krytím) pro maximální hodnoty (např. nejvyšší počet obyvatel) a minimální (autoři doporučují používat krytí zhruba 80–85 %; vyšší krytí by zcela znemožnilo určení barevného odstínu hodnoty tematické vrstvy) pro minimální hodnoty (např. nejmenší počet obyvatel).
+
+Použití bílé nebo černé barvy má výrazný vliv na výslednou podobu mapy. Normalizační černá barva mění celkovou barevnou hodnotu tematické barvy; oblasti s nízkými normalizačními hodnotami se jeví jako spíše tmavé a nevýrazné, čímž dávají vyniknout oblastem s hodnotami vysokými, kde je tematická barva výrazně světlejší i sytější a tím výraznější. Naopak normalizační bílá barva mění primárně sytost (a jen doplňkově) tón barvy. Jelikož samotná sytost jako barevná proměnná je v kartografii považována za nedostatečnou, value-by-alpha mapy s použitím bílé jako normalizační barvy jsou méně kontrastní a tedy efektivní, než ty s využitím černé. (J. Miklín, Tvorba map)
+
+
 
 ### Pokročilé kartodiagramy
 #### Waffle
