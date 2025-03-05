@@ -13,7 +13,7 @@ Použití bílé nebo černé barvy má výrazný vliv na výslednou podobu mapy
 
 ### Pokročilé kartodiagramy
 #### Waffle
-Metoda Waffles zobrazuje kvantity kategorií tvořící celek. Je podobná koláčovému grafu, ale má čtvercový nebo mřížkový vzhled. Každá ze složek kategorie je pak v mřížce zobrazena jako opakující se symbol. Symbolika se obvykle provádí pomocí různých odstínů, které reprezentují různé kategorie. Metodu lze rovněž využít pro zobrazení časových řad.
+Metoda *Waffles* zobrazuje kvantity kategorií tvořící celek. Je podobná pie chartu, ale má mřížkový vzhled. Každá ze složek kategorie je pak v mřížce zobrazena jako opakující se symbol. Symbolika se obvykle provádí pomocí různých odstínů, které reprezentují různé kategorie. Metodu lze rovněž využít pro zobrazení časových řad.
 
 <figure markdown>
   ![](../assets/Uloha2/Waffle-grid.png "Ukázka metody z California Water Atlas (William Bowen, 1979)"){ width=500px }
@@ -24,10 +24,10 @@ Metoda Waffles zobrazuje kvantity kategorií tvořící celek. Je podobná kolá
 {: .button_array}
 
 #### Coxcombs
-Coxcomb je varianta na pie chart, který vzniká dělením kruhu rovnoměrných segmentů (např. dle počtu časových úseků), s poloměrem (výseče) lišícím se podle kvantity jevu. Výsledkem jsou segmenty, které se liší rozsahem od středu grafu. Obvykle se používá k zobrazení časových jevů v souladu s původním použitím Florence Nightingale v jejím klasickém diagramu úmrtnosti východních armád z roku 1858.
+*Coxcomb* je varianta na pie chart, který vzniká dělením kruhu do rovnoměrných segmentů (např. dle počtu časových úseků), s poloměrem (výseče) lišícím se podle kvantity jevu. Výsledkem jsou segmenty, které se liší rozsahem od středu grafu. Obvykle se používá k zobrazení časových jevů v souladu s původním použitím Florence Nightingale v jejím klasickém diagramu úmrtnosti východních armád z roku 1858.
 
 <figure markdown>
-  ![](../assets/Uloha2/Nightingale-mortality.jpg "Diagram úmrtnosti F. Nightingale"){ width=500px }
+  ![](../assets/Uloha2/Nightingale-mortality.jpg "Diagram úmrtnosti (F. Nightingale, 1858)"){ width=500px }
 </figure>
 
 [Coxcomb toolbox for ArcGIS](https://carto.maps.arcgis.com/home/item.html?id=ebdf8024e9714c7dbfa4f5342634fcdb){ .md-button .md-button--primary .server_name .external_link_icon_small target="_blank"}
