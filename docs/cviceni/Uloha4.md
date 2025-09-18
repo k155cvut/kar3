@@ -1,4 +1,4 @@
-# Analýza území
+# Úloha IV – Analýza území
 
 ## Zadání úlohy
 
@@ -12,24 +12,24 @@
 
     **Jednotlivá zadání:**
 
-    -   Bořík – Jičín
-    -   Černohousová – Semily
-    -   Hádlík – Rakovník
-    -   Klimeš – Strakonice
-    -   Kovář – Nymburk
-    -   Mihal – Tachov
-    -   Mlejnek – Teplice
-    -   Nedoma – Kutná Hora
-    -   Pokorný – Kladno
-    -   Rabasová – Mělník
-    -   Roučka – Jihlava
-    -   Sedlák – Uherské Hradiště
-    -   Slabá – Kroměříž
-    -   Soukupová – Písek
-    -   Šimek – Tábor
-    -   Tomášková – Beroun
-    -   Turek – Blansko
-    -   Zbíral – Svitavy
+    -   01 – Jičín
+    -   02 – Semily
+    -   03 – Rakovník
+    -   04 – Strakonice
+    -   05 – Nymburk
+    -   06 – Tachov
+    -   07 – Teplice
+    -   08 – Kutná Hora
+    -   09 – Kladno
+    -   10 – Mělník
+    -   11 – Jihlava
+    -   12 – Uherské Hradiště
+    -   13 – Kroměříž
+    -   14 – Písek
+    -   15 – Tábor
+    -   16 – Beroun
+    -   17 – Blansko
+    -   18 – Svitavy
     -   \<volné\> – Hradec Králové
     
 

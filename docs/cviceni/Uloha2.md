@@ -1,4 +1,4 @@
-# Pokročilé metody tematické kartografie
+# Úloha II – Pokročilé metody tematické kartografie
 
 ## Zadání 
 

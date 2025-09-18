@@ -8,7 +8,7 @@ nav:
       - Úloha IV – Analýza území: cviceni/Uloha4.md
   - Data: data.md
   # - Hodnocení: hodnoceni.md
-  - Semestrální práce – mapová aplikace: semestralka.md
+  - Semestrální práce (Úloha V) – mapová aplikace: semestralka.md
   - Tvorba digitálních modelů terénu: dmt.md
   - Pokročilé metody TK: advanced.md 
 plugins:
