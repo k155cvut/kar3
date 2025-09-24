@@ -7,13 +7,13 @@ V této úloze si vyzkoušíte práci s daty LLS (letecké laserové skenování
 Pomocí stahovací služby ATOM si z Geoportálu ČÚZK opatřete data LLS za příslušný mapový list níže dle zadání:
 
 !!! tip "**Jednotlivá zadání:** "   
-    01 | Louny 1–2 <br />
+    01 | Dubá 8–0 <br />
     02 | Most 4–8 <br />
     03 | Most 2–7 <br />
     04 | Litoměřice 6–5 <br />
     05 | Louny 0–1 <br />
     06 | Most 5–9 <br />
-    07 | Louny 1–1 <br />
+    07 | Dubá 9–1 <br />
     08 | Most 3–9 <br />
     09 | Louny 1–0 <br />
     10 | Most 3–8 <br />
@@ -28,7 +28,12 @@ Pomocí stahovací služby ATOM si z Geoportálu ČÚZK opatřete data LLS za p�
     19 | Most 3–7 <br />
     20 | Louny 2–2 <br />
     21 | Most 4–9 <br />
-    22 | Louny 2–0
+    22 | Louny 2–0 <br />
+    23 | Litoměřice 0–0 <br />
+    24 | Louny 1–1 <br />
+    25 | Dubá 7–0 <br />
+    26 | Louny 1–2 <br />
+    27 | Dubá 9–0 
   
 
 Soubory obsahují data ve formátu LAZ.
