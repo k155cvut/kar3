@@ -23,7 +23,7 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 3.  **Mapa 3** bude s využitím plošné schematické (tzv. Dorlingovy) anamorfózy zobrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
-  ![Mapa 3](../assets/Uloha2/Kartogram.png "Mapa 3"){ width=400px }
+  ![Mapa 3](../assets/Uloha2/Dorling.png "Mapa 3"){ width=400px }
   <figcaption>Mapa 3</figcaption>
 </figure>
 
