@@ -1,9 +1,9 @@
 # Pokročilé metody TK
 
-### Kartografická anamorfóza
+## Kartografická anamorfóza
 Podstatou kartografické anamorfózy (ang. *cartogram*) je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
 
-Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
+Použití je vhodné zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
 
 Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Obrázky níže vystihují rozdíly mezi základními druhy a dále následuje popis tvorby vybraných v softwaru GIS.
 
@@ -66,7 +66,13 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     - nastavíme barvu pro výplň jednotlivých kruhů (analogicky k předchozím mapám), avšak nástroj *Create Cartogram* bohužel nezachovává veškeré atributy původní vrstvy, proto je nutné nejprve pomocí *Join* připojit informace o procentním rozdílu ve výsledku volebních kandidátů z původní vrstvy obcí (připojit obce a jejich anamorfované verze na základě ID, které zůstává nezměněno).
     - legendu vytvoříme pomocí nástroje <https://radiat.pythonanywhere.com/> (export do SVG a v layoutu vložit jako grafický objekt; poté nesmíte měnit velikost, aby byla legenda platná!)
 
-  !!! note "Multivariate symbologie v ArcGIS Pro"
+## Multivariantní mapy
+Multivariantní mapa zobrazuje dvě či více proměnných na pomocí kombinace různých sad symbolů. Každá proměnná je znázorněna s využitím standardních metody tematické kartografie. Při tvorbě multivariantní mapy se pro vyjádření dílčích jevů kombinují různé vizuální proměnné (barva, velikost, tvar, textura, atd.), což velmi často vede k tvrobě komplexního vizuálního symbolu.
+
+Hlavním cílem multivariantní mapy je vizualizovat statistické nebo geografické vztahy mezi jednotlivými proměnnými. Taková mapa může odhalit vzájemné souvislosti mezi proměnnými účinněji než pouhé srovnání samostatných (jednoproměnných) map. Zároveň však hrozí kognitivní přetížení uživatele, pokud jsou použité symboly příliš složité na snadné pochopení.
+
+
+!!! note "Multivariate symbologie v ArcGIS Pro"
     - jako podklad využijeme kvalifikační kartogram (mapa 1)
     - k vrstvě obcí přidáme data o vítězi prvního kola z [databáze ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1) (nutná úprava v Excelu, ke každé obci stačí vhodnou funkcí vypočíst jméno vítěze 1. kola prezidentské volby)
     - dále se ujistíme, že vrstva obsahuje volební účast (za 2. kolo v %) a počet hlasujících voličů

@@ -6,28 +6,28 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 **S využitím software QGIS či ArcGIS vytvořte čtyři autorské koncepty tematických map na papír velikosti A4.**
 
-1.  **Mapa 1** bude s využitím jednoduchého kvalifikačního/klasifikačního kartogramu zobrazovat vybraný jev (**náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
+**Mapa 1** bude s využitím jednoduchého kvalifikačního/klasifikačního kartogramu zobrazovat vybraný jev (**náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
   ![Mapa 1](../assets/Uloha2/Kartogram.png "Mapa 1"){ width=400px }
   <figcaption>Mapa 1</figcaption>
 </figure>
 
-2.  **Mapa 2** bude s využitím plošné geografické spojité anamorfózy obrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
+**Mapa 2** bude s využitím plošné geografické spojité anamorfózy obrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
   ![Mapa 2](../assets/Uloha2/Spojita.png "Mapa 2"){ width=400px }
   <figcaption>Mapa 2</figcaption>
 </figure>
 
-3.  **Mapa 3** bude s využitím plošné schematické (tzv. Dorlingovy) anamorfózy zobrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
+**Mapa 3** bude s využitím plošné schematické (tzv. Dorlingovy) anamorfózy zobrazovat vybraný jev (**počet platných voličských hlasů, náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
   ![Mapa 3](../assets/Uloha2/Dorling.png "Mapa 3"){ width=400px }
   <figcaption>Mapa 3</figcaption>
 </figure>
 
-4.  **Mapa 4** bude s využitím kartogramu a plošného kartodiagramu zobrazovat vybraný jev (**náskok vítěze v %, počet platných voličských hlasů, volební účast v % a vítěze 1.  kola**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
+**Mapa 4** bude s využitím kartogramu a plošného kartodiagramu zobrazovat vybraný jev (**náskok vítěze v %, počet platných voličských hlasů, volební účast v % a vítěze 1.  kola**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
 <figure markdown>
   ![Mapa 4](../assets/Uloha2/Multi.png "Mapa 4"){ width=400px }
@@ -51,7 +51,13 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 -   úprava tabulky z [VD ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1){target="_blank"} (ponechat jen záhlaví sloupců a data) 
 -   připojení upravené tabulky k vrstvě obcí v daném ORP *(nastavení Definition Query)*
 -   export nové vrstvy *(Data-Export Features)*
--   výpočet nových atributů (`PP_podil`, `AB_podil`, `vitez_rozdil_rel`) 
+-   výpočet nových atributů (`PP_podil`, `AB_podil`, `vitez_rozdil_rel`)
+
+**Postup zpracování**
+
+- [kartogram](https://k155cvut.github.io/kar2/kartogram/) (Mapa 1)
+- [kartografická anamorfóza](https://k155cvut.github.io/kar3/advanced/#kartograficka-anamorfoza) (Mapa 2 a 3)
+- [multivariantní mapa](https://k155cvut.github.io/kar3/advanced/#multivariantni-mapy) (Mapa 4)
 
 ## Výstupy cvičení
 Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ odevzdaná v termínu prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"}.
