@@ -55,9 +55,9 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 **Postup zpracování**
 
-- [kartogram](https://k155cvut.github.io/kar2/kartogram/) (Mapa 1)
-- [kartografická anamorfóza](https://k155cvut.github.io/kar3/advanced/#kartograficka-anamorfoza) (Mapa 2 a 3)
-- [multivariantní mapa](https://k155cvut.github.io/kar3/advanced/#multivariantni-mapy) (Mapa 4)
+- [kartogram](https://k155cvut.github.io/kar2/kartogram/){target="_blank"} (Mapa 1)
+- [kartografická anamorfóza](https://k155cvut.github.io/kar3/advanced/#kartograficka-anamorfoza){target="_blank"} (Mapa 2 a 3)
+- [multivariantní mapa](https://k155cvut.github.io/kar3/advanced/#multivariantni-mapy){target="_blank"} (Mapa 4)
 
 ??? tip "Chybějící interval"    
     Chybějící interval v souměrné divergentní stupnici lze vyřešit jednoduchou grafickou úpravou legendy. Po převedení dynamické legendy na grafiku (Convert to Graphics) postupně rozdělte skupinu grafických prvků legendy až na úroveň jednotlivých prvků, odstraňte symbol pro příslušný interval (včetně jeho popisu) a místo něj vhodně umístěte jednoduchou čáru (InsertGraphics), jež bude graficky umístěna za ostatními symboly v legendě (pravé tlačítko-OrderSend to Back). Výsledná legenda by měla mít následující podobu:
@@ -84,7 +84,7 @@ Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ ode
 Úloha je uznána (stav splněno/nesplněno), pokud jsou splněny následující podmínky:
 
 -   úplnost technické zprávy (obsah TZ viz výše)
--   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=0))
+-   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=0){target="_blank"})
 
 !!! warning "Opravy"
     V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"} vždy nejpozději do 7 dní od vrácení úlohy. Výstup lze odevzdat po __maximálně dvou opravách__, v případě pozdního odevzdání či nesprávného výstupu po druhé opravě je úloha __označena jako nesplněná__{style="color:#c22521;"}.
