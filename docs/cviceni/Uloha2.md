@@ -39,7 +39,7 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 **Jednotlivá zadání**
 
--   viz [**tabulka**](https://moodle-vyuka.cvut.cz/draftfile.php/12299/user/draft/671901552/155KAT3_Uloha2_zadani_2024.xlsx){target="_blank"}
+-   viz [**tabulka**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=1292987354){target="_blank"}
 
 **Zdroje dat:**
 
@@ -75,7 +75,7 @@ Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ ode
 Úloha je uznána (stav splněno/nesplněno), pokud jsou splněny následující podmínky:
 
 -   úplnost technické zprávy (obsah TZ viz výše)
--   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0))
+-   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=0))
 
 !!! warning "Opravy"
     V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"} vždy nejpozději do 7 dní od vrácení úlohy. Výstup lze odevzdat po __maximálně dvou opravách__, v případě pozdního odevzdání či nesprávného výstupu po druhé opravě je úloha __trvale označena jako nesplněná__{style="color:#c22521;"}.
