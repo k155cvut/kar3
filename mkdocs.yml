@@ -6,11 +6,11 @@ nav:
       - Úloha II – Pokročilé metody tematické kartografie: cviceni/Uloha2.md
       - Úloha III – Kreativní mapa: cviceni/Uloha3.md
       - Úloha IV – Analýza území: cviceni/Uloha4.md
+      - Úloha V - Mapová aplikace: semestralka.md
+  - Tvorba DMT: dmt.md
+  - Pokročilé metody TK: advanced.md
   - Data: data.md
   # - Hodnocení: hodnoceni.md
-  - Semestrální práce (Úloha V) – mapová aplikace: semestralka.md
-  - Tvorba digitálních modelů terénu: dmt.md
-  - Pokročilé metody TK: advanced.md 
 plugins:
   - search
   - glightbox:

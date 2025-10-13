@@ -2,9 +2,9 @@
 
 ## Zadání 
 
-Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifikačního kartogramu (Mapa 1). Hlavní náplní cvičení však bude tvorba plošné anamorfózy – geografické nespojité (Mapa 2) a spojité (Mapa 3), a schematické, tzv. Dorlingovy anamorfózy (Mapa 4). Vzhledem k tomu, že v ArcGIS Pro dosud neexistuje nástroj pro tvorbu plošné geografické spojité anamorfózy (Mapa 3), budeme tuto část úlohy řešit v QGIS. Postup tvorby kartogramu (Mapa 1) a ostatních typů anamorfózy (Mapa 2 a 4) bude představen v ArcGIS Pro, stejně jako finální kompozice map. Na závěr si ukážeme tvorbu multivariantní mapy (Mapa 5).
+Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifikačního kartogramu (Mapa 1). Hlavní náplní cvičení však bude tvorba plošné anamorfózy – geografické spojité (Mapa 2) a schematické, tzv. Dorlingovy anamorfózy (Mapa 3). Vzhledem k tomu, že v ArcGIS Pro dosud neexistuje nástroj pro tvorbu plošné geografické spojité anamorfózy (Mapa 2), budeme tuto část úlohy řešit v QGIS. Postup tvorby kartogramu (Mapa 1) a ostatních typů anamorfózy (Mapa 2 a 3) bude představen v ArcGIS Pro, stejně jako finální kompozice map. Na závěr si ukážeme tvorbu multivariantní mapy (Mapa 4).
 
-**S využitím software QGIS či ArcGIS vytvořte pět autorských konceptů tematických mapy na papír velikosti A4.**
+**S využitím software QGIS či ArcGIS vytvořte čtyři autorské koncepty tematických map na papír velikosti A4.**
 
 1.  **Mapa 1** bude s využitím jednoduchého kvalifikačního/klasifikačního kartogramu zobrazovat vybraný jev (**náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
@@ -34,46 +34,52 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
   <figcaption>Mapa 4</figcaption>
 </figure>
 
-5.  **Mapa 5** bude s využitím kartogramu a kartodiagramu zobrazovat **volební účast v krajích a výsledky voleb do poslanecké sněmovny.**
 
-6.  **Mapa 6** bude s využitím kartogramu a kartodiagramu zobrazovat **aktuální míru nezaměstnanosti a vývoj růstu mezd a průměrné ceny bytů za kvartály v krajích pro období posledních 4 let.**
+## Postup
 
-**Zdroje dat:**\
+**Jednotlivá zadání**
+
+-   viz [**tabulka**](https://moodle-vyuka.cvut.cz/draftfile.php/12299/user/draft/671901552/155KAT3_Uloha2_zadani_2024.xlsx){target="_blank"}
+
+**Zdroje dat:**
 
 -   polygonová vrstva obcí *(OBCE_UAP)* z ArcČR 4.1
 -   výsledky prezidentských voleb z [**Veřejné databáze ČSÚ**](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1){target="_blank"} dle ORP (platné hlasy, druhé kolo)
 
-**Jednotlivá zadání**
-
--   viz [tabulka](https://moodle-vyuka.cvut.cz/draftfile.php/12299/user/draft/671901552/155KAT3_Uloha2_zadani_2024.xlsx){target="_blank"}
-
-**Hodnocení:**
-
--   úplnost technické zprávy (obsah TZ viz níže)
--   tematické mapy (splnění zásad tematické kartografie: správná aplikace metody, klasifikace dat, kompoziční prvky, popis)
--   max. 2 opravy (oprava vždy nejpozději do 7 dní od vrácení úlohy)
--   splněno/nesplněno
-
-#### Postup
-
 **Příprava dat**
 
--   úprava tabulky z VD ČSÚ (ponechat jen záhlaví sloupců a data) 
+-   úprava tabulky z [VD ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1){target="_blank"} (ponechat jen záhlaví sloupců a data) 
 -   připojení upravené tabulky k vrstvě obcí v daném ORP *(nastavení Definition Query)*
 -   export nové vrstvy *(Data-Export Features)*
--   výpočet nových atributů (PP_podil, AB_podil, vitez_rozdil_rel) 
+-   výpočet nových atributů (`PP_podil`, `AB_podil`, `vitez_rozdil_rel`) 
 
-!!! warning "K odevzdání"
-    Pomocí Moodle **elektronicky** odevzdejte v **zazipovaném souboru**:
+## Výstupy cvičení
+Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ odevzdaná v termínu prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"}.
 
-    1.Technickou zprávu (PDF), která bude obsahovat:
-
+???+ note-grey "Požadované náležitosti technické zprávy"
     -   stručný postup řešení úlohy (použitý sw, nástroje apod.),
-    -   zdůvodnění případných "neobvyklých" kroků v úpravě dat (např. výpočet škálovacího faktoru apod.),
-    -   vztah pro výpočet velikosti prvků při tvorbě plošné geografické nespojité anamorfózy + zdůvodnění,
+    -   zdůvodnění případných "neobvyklých" kroků v úpravě dat (např. tvorba pomocných polygonů pro diagramové měířtko apod.),
+    -   vztah pro výpočet velikosti hodnotového měřítka plošné geografické spojité anamorfózy + zdůvodnění,
     -   tabulku s daty a mezivýpočty,
-    -   zhodnocení vhodnosti použití aplikovaných metod (která je názornější, lépe vystihuje skutečnost apod.),
+    -   zhodnocení vhodnosti použití aplikovaných metod (která je pro dané téma názornější, lépe vystihuje skutečnost apod.),
     -   zhodnocení vhodnosti softwaru pro tvorbu dané metody,
-    -   **všechny vytvořené tematické mapy na formát A4 **(lze i jako samostatná PDF);
+    -   povinnou přílohou jsou **všechny vytvořené tematické mapy na formát A4 **;
 
-    2.  MPKX package pro všechny mapy či kompletní projekt **APRX s GDB se všemi použitými daty**.
+## Hodnocení
+Úloha je uznána (stav splněno/nesplněno), pokud jsou splněny následující podmínky:
+
+-   úplnost technické zprávy (obsah TZ viz výše)
+-   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0))
+
+!!! warning "Opravy"
+    V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"} vždy nejpozději do 7 dní od vrácení úlohy. Výstup lze odevzdat po __maximálně dvou opravách__, v případě pozdního odevzdání či nesprávného výstupu po druhé opravě je úloha __trvale označena jako nesplněná__{style="color:#c22521;"}.
+
+## Termíny
+
+- odevzdání 1: __neděle 16. listopadu 2025__{.outlined}
+- odevzdání 2 (oprava 1): __neděle 30. listopadu 2025__{.outlined}
+- odevzdání 3 (oprava 2): __neděle 14. prosince 2025__{.outlined}
+
+
+
+    

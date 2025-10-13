@@ -1,4 +1,4 @@
-# Semestrální práce – Webová mapová aplikace s využitím builderů
+# ÚLoha V – Webová mapová aplikace s využitím builderů (semestrální práce)
 
 ## Zadání a požadavky
   
