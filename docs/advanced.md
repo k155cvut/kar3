@@ -1,51 +1,9 @@
 # Pokročilé metody TK
 
-### Pokročilé areálové metody
-#### Dasymetrická metoda
-TBA
-
-#### Value-by-alpha
-TBA
-
-### Pokročilé kartodiagramy
-#### Waffle
-Metoda *Waffles* zobrazuje kvantity kategorií tvořící celek. Je podobná pie chartu, ale má mřížkový vzhled. Každá ze složek kategorie je pak v mřížce zobrazena jako opakující se symbol. Symbolika se obvykle provádí pomocí různých odstínů, které reprezentují různé kategorie. Metodu lze rovněž využít pro zobrazení časových řad.
-
-<figure markdown>
-  ![](../assets/Uloha2/Waffle-grid.png "Ukázka metody z California Water Atlas (William Bowen, 1979)"){ width=500px }
-</figure>
-
-[Waffle grid toolbox for ArcGIS](https://carto.maps.arcgis.com/home/item.html?id=d749baac3ede42c3b6f011dc41627b03){ .md-button .md-button--primary .server_name .external_link_icon_small target="_blank"}
-[Mapping coronavirus waffles](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/mapping-coronavirus-waffles/){ .md-button .md-button--primary .server_name .external_link_icon_small target="_blank"}
-{: .button_array}
-
-#### Coxcombs
-*Coxcomb* je varianta na pie chart, který vzniká dělením kruhu do rovnoměrných segmentů (např. dle počtu časových úseků), s poloměrem (výseče) lišícím se podle kvantity jevu. Výsledkem jsou segmenty, které se liší rozsahem od středu grafu. Obvykle se používá k zobrazení časových jevů v souladu s původním použitím Florence Nightingale v jejím klasickém diagramu úmrtnosti východních armád z roku 1858.
-
-<figure markdown>
-  ![](../assets/Uloha2/Nightingale-mortality.jpg "Diagram úmrtnosti (F. Nightingale, 1858)"){ width=500px }
-</figure>
-
-[Coxcomb toolbox for ArcGIS](https://carto.maps.arcgis.com/home/item.html?id=ebdf8024e9714c7dbfa4f5342634fcdb){ .md-button .md-button--primary .server_name .external_link_icon_small target="_blank"}
-[Mapping coronavirus coxcombs](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/mapping-coronavirus-coxcombs/){ .md-button .md-button--primary .server_name .external_link_icon_small target="_blank"}
-{: .button_array}
-
-???+ tip "Legenda u pokročilých kartodiagramů"
-      V případě metody **coxcombs** toolbox sice vytvoří kartodiagramy, ale nadstavba pro tvorbu legendy v layoutu neexistuje. Proto
-      je nutné si připravit data způsobem, který zajistí tvorbu legendy již v samotném průběhu vizualizace. Doporučení pro strukturu
-      coxcombs tedy zní takto:
-
-      - do tabulky dat přidejte fiktivní záznamy, které budou obsahovat globální minimum a globální maximum (stejné napříč všemi kategoriemi)
-
-      - další (tedy třetí) fiktivní záznam bude obsahovat takové hodnoty, které se objeví v legendě (tzn. vhodně zaokrouhlené a rostoucí po směru hodin)
-      
-      - pokud záznamy pouze vkládáte jako *Add Row* v atributové tabulce, umístí se do počátku souřadnicového systému; vy však můžete přemístit bod
-      reprezentující legendu (třetí fiktivní záznam) do blízkosti mapového obsahu, aby se zobrazil v mapovém okně layoutu.
-
-### Kartografická anamorfóza
+## Kartografická anamorfóza
 Podstatou kartografické anamorfózy (ang. *cartogram*) je deformace geometrického parametru prvku (vzdálenosti nebo plochy) na základě kvantitativní tematické hodnoty (počet obyvatel, cena jízdného, HDP).
 
-Použití je **vhodné** zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
+Použití je vhodné zejména pro data, která výrazně nekorelují s rozlohou jednotek. Zároveň je nutné mít na paměti, že čtenář mapy musí mít povědmoí o zobrazenovaném území, jinak by mohla být mapa matoucí.
 
 Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné literatuře nepanuje konsenzus. Obrázky níže vystihují rozdíly mezi základními druhy a dále následuje popis tvorby vybraných v softwaru GIS.
 
@@ -97,7 +55,7 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     - do legendy doplníme měřítko pro anamorfózu 
 
     ???+ tip "Měřítko pro anamorfózu"
-          Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! - !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*.
+          Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! - !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*. 
 
 !!! note "Spojitá geografická anamorfóza v ArcGIS Pro"
        
@@ -112,15 +70,21 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     - nastavíme barvu pro výplň jednotlivých kruhů (analogicky k předchozím mapám), avšak nástroj *Create Cartogram* bohužel nezachovává veškeré atributy původní vrstvy, proto je nutné nejprve pomocí *Join* připojit informace o procentním rozdílu ve výsledku volebních kandidátů z původní vrstvy obcí (připojit obce a jejich anamorfované verze na základě ID, které zůstává nezměněno).
     - legendu lze alternativně vytvořit pomocí nástroje <https://radiat.pythonanywhere.com/> (export do SVG a v layoutu vložit jako grafický objekt; poté neměnit velikost grafického objektu, aby zůstala legenda platná!)
 
-  !!! note "Multivariate symbologie v ArcGIS Pro"
+## Multivariantní mapy
+Multivariantní mapa zobrazuje dvě či více proměnných na pomocí kombinace různých sad symbolů. Každá proměnná je znázorněna s využitím standardních metody tematické kartografie. Při tvorbě multivariantní mapy se pro vyjádření dílčích jevů kombinují různé vizuální proměnné (barva, velikost, tvar, textura, atd.), což velmi často vede k tvrobě komplexního vizuálního symbolu.
+
+Hlavním cílem multivariantní mapy je vizualizovat statistické nebo geografické vztahy mezi jednotlivými proměnnými. Taková mapa může odhalit vzájemné souvislosti mezi proměnnými účinněji než pouhé srovnání samostatných (jednoproměnných) map. Zároveň však hrozí kognitivní přetížení uživatele, pokud jsou použité symboly příliš složité na snadné pochopení.
+
+
+!!! note "Multivariate symbologie v ArcGIS Pro"
     - jako podklad využijeme kvalifikační kartogram (mapa 1)
     - k vrstvě obcí přidáme data o vítězi prvního kola z [databáze ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1) (nutná úprava v Excelu, ke každé obci stačí vhodnou funkcí vypočíst jméno vítěze 1. kola prezidentské volby)
     - dále se ujistíme, že vrstva obsahuje volební účast (za 2. kolo v %) a počet hlasujících voličů
     - tuto vrstvu převedeme pomocí *Feature to point* na bodovou vrstvu
     - v atributové tabulce přidáme dva sloupce typu string: první bude obsahovat textový přepis volební účasti zaokrouhlený na 1 desetinné místo, druhý bude obsahovat [název barvy](https://www.w3.org/TR/css-color-3/#svg-color) zvolené pro vítězného kandidáta 1. kola (při výběru barvy kontrolujte čitelnost nad celou paletou divergentní stupnice podkladového kartogramu)
-    - v symbolice povolit *Allow symbol property connections\
+    - v symbolice povolit *Allow symbol property connections*
     - primární symboliku nastavit na *Graduated symbols*, přičemž samotný znak (*Template*) nastavit na *Text Marker* (kategorie ArcGIS 2D)
     - ve vlastnostech symbolu nastavit propojit *Text string* s atributem obsahujícím textový přepis procent volební účasti; poté definovat vhodné velikosti pro každou kategorii, font, halo, apod.
-    - ve vlastnostech symbolu propojit *Color* s atributem obsahujícím definovaný název barvy pro vítěze 1. kola\
+    - ve vlastnostech symbolu propojit *Color* s atributem obsahujícím definovaný název barvy pro vítěze 1. kola
     - zvolit vhodnou minimální a maximální velikost symbolu
     - přidat anotace, vytvořit legendu a dokončit layout
