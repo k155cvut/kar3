@@ -99,6 +99,10 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     ???+ tip "Měřítko pro anamorfózu"
           Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! - !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*.
 
+!!! note "Spojitá geografická anamorfóza v ArcGIS Pro"
+       
+    - Od verze 3.5. je k dispozici nástroj *Generate Contiguous Cartogram* viz [link](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/marmite-maps-now-available-in-arcgis-pro)
+
 !!! note "Schematická anamorfóza v ArcGIS Pro" 
     - z Esri galerie stáhneme toolbox *[Graphical Cartogram](https://carto.maps.arcgis.com/home/item.html?id=f36049083ce947b08935a67f7184863d)*
     - přidáme stažený toolbox do projektu ArcGIS Pro (*Toolbox – Add New*)
@@ -106,7 +110,7 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     - z důvodu navazující tvorby legendy je však nutné do vrstvy obcí pomocí editace přidat tři polygony (umístit je s jistým odstupem od ORP). Není nutné u nich vyplnit jiné atributy než sumu platných hlasů: zde by měly být obsaženy tři hodnoty vhodně vystihující rozsah hodnot tohoto pole (např. 50, 500, 1000 – pokud minimum = 63 a maximum = 987 nebo 5781). Ideálně tedy volit hodnotu těsně pod minimem a těsně nad maximem, avšak pokud je hodnota maxima velmi odlehlá, není (vzhledem k zachování rozumných rozměrů legendy) nutné obsáhnout velikost symbolu pro takovou hodnotu).
     - jakmile nástroj proběhne, vznikne nová anamorfovaná vrstva, u níž pomocí výběru označíme tři přidané prvky pro legendy a pomocí nástroje *Feature to Graphic* překonvertujeme na grafické objekty. S nimi lze pracovat přes lištu *Graphic:* umístíme kruhy tak, aby měly společný dotyk v jejich nejspodnějším bodě a nastavíme transparentní vnitřní výplň (v Layoutu k nim dodáme popisky a linky, inspirace pro legendu například [zde](https://www.esri.com/arcgis-blog/wp-content/uploads/2023/06/cartogram3.jpg))
     - nastavíme barvu pro výplň jednotlivých kruhů (analogicky k předchozím mapám), avšak nástroj *Create Cartogram* bohužel nezachovává veškeré atributy původní vrstvy, proto je nutné nejprve pomocí *Join* připojit informace o procentním rozdílu ve výsledku volebních kandidátů z původní vrstvy obcí (připojit obce a jejich anamorfované verze na základě ID, které zůstává nezměněno).
-    - legendu vytvoříme pomocí nástroje <https://radiat.pythonanywhere.com/> (export do SVG a v layoutu vložit jako grafický objekt; poté nesmíte měnit velikost, aby byla legenda platná!)
+    - legendu lze alternativně vytvořit pomocí nástroje <https://radiat.pythonanywhere.com/> (export do SVG a v layoutu vložit jako grafický objekt; poté neměnit velikost grafického objektu, aby zůstala legenda platná!)
 
   !!! note "Multivariate symbologie v ArcGIS Pro"
     - jako podklad využijeme kvalifikační kartogram (mapa 1)
