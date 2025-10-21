@@ -55,7 +55,7 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     - do legendy doplníme měřítko pro anamorfózu 
 
     ???+ tip "Měřítko pro anamorfózu"
-          Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! - !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*. 
+          Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! * !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*. 
 
 !!! note "Spojitá geografická anamorfóza v ArcGIS Pro"
        
