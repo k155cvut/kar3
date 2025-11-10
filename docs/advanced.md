@@ -57,9 +57,19 @@ Klasifikace kartografické anamorfózy je poměrně složitá a ani v odborné l
     ???+ tip "Měřítko pro anamorfózu"
           Měřítko pro anamorfózu (tj. čtverec o určité ploše = např. 100 volebních hlasů) vypočteme z nové anamorfované plochy celého ORP a celkového počtu hlasů za ORP `ctverec_km2 = 100/!pocet_hlasu_celkem_ORP! * !shape_Area_ORP!/1000000)`. Výsledná hodnota udává velikost plochy (v km2), která odpovídá 100 voličským hlasům – je nutné přepočítat na cm/mm dle měřítka mapy, abychom daný obrazec o správných rozměrech vytvořili v layoutu *(Insert-Graphics)*. 
 
-!!! note "Spojitá geografická anamorfóza v ArcGIS Pro"
-       
+!!! note "Spojitá geografická anamorfóza v ArcGIS Pro"    
     - Od verze 3.5. je k dispozici nástroj *Generate Contiguous Cartogram* viz [link](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/marmite-maps-now-available-in-arcgis-pro)
+    - Nástroj obsahuje pouze několik parametrů a jeho vyplnění je intuitivní. K výpočtu spojité anamorfózy lze zvolit jeden ze dvou dostupných algoritmů.
+    - *Diffusion* metoda vychází z algoritmu Gastner-Newman (2004). Funguje tak, že mapu rozdělí na mřížku a využívá principy náhodného šíření hustoty – vysokohustotní oblasti se „vyfouknou“, nízkohustotní se „vtáhnou“, až se dosažení cílového poměru (např. oblasti úměrné populaci) v každé buňce mřížky.
+    - *Flow-based* metoda je novější a navržená proto, že difúzní přístup může být výpočetně náročný. *Flow-based* algoritmus používá postupné proudění hustoty, což umožňuje rychlejší výpočet při zachování podobné kvality výsledku.
+    <br>
+    <br>
+    <div style="text-align: center;">
+    <figure markdown>
+      ![Spojitá anamorfóza](https://www.esri.com/arcgis-blog/wp-content/uploads/2025/04/GenerateCartogramTool.png){ width=500px }
+      <figcaption>Nástroj pro tvorbu spojité anamorfózy.</figcaption>
+    </figure>
+    </div>
 
 !!! note "Schematická anamorfóza v ArcGIS Pro" 
     - z Esri galerie stáhneme toolbox *[Graphical Cartogram](https://carto.maps.arcgis.com/home/item.html?id=f36049083ce947b08935a67f7184863d)*
@@ -81,10 +91,18 @@ Hlavním cílem multivariantní mapy je vizualizovat statistické nebo geografic
     - k vrstvě obcí přidáme data o vítězi prvního kola z [databáze ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1) (nutná úprava v Excelu, ke každé obci stačí vhodnou funkcí vypočíst jméno vítěze 1. kola prezidentské volby)
     - dále se ujistíme, že vrstva obsahuje volební účast (za 2. kolo v %) a počet hlasujících voličů
     - tuto vrstvu převedeme pomocí *Feature to point* na bodovou vrstvu
-    - v atributové tabulce přidáme dva sloupce typu string: první bude obsahovat textový přepis volební účasti zaokrouhlený na 1 desetinné místo, druhý bude obsahovat [název barvy](https://www.w3.org/TR/css-color-3/#svg-color) zvolené pro vítězného kandidáta 1. kola (při výběru barvy kontrolujte čitelnost nad celou paletou divergentní stupnice podkladového kartogramu)
-    - v symbolice povolit *Allow symbol property connections*
+    - v atributové tabulce přidáme sloupec typu text: bude obsahovat textový přepis volební účasti zaokrouhlený na 1 desetinné místo
     - primární symboliku nastavit na *Graduated symbols*, přičemž samotný znak (*Template*) nastavit na *Text Marker* (kategorie ArcGIS 2D)
-    - ve vlastnostech symbolu nastavit propojit *Text string* s atributem obsahujícím textový přepis procent volební účasti; poté definovat vhodné velikosti pro každou kategorii, font, halo, apod.
-    - ve vlastnostech symbolu propojit *Color* s atributem obsahujícím definovaný název barvy pro vítěze 1. kola
+    - v symbologii povolit *Allow symbol property connections*
+    - ve vlastnostech symbolu nastavit propojení *Text string* s atributem obsahujícím textový přepis procent volební účasti; poté definovat vhodné velikosti pro každou kategorii, font, halo, apod.
+    - ve vlastnostech symbolu definovat *Color* pomocí *Expression builderu* podmínkou, která k vítězi 1. kola přiřadí vybraný [název barvy](https://www.w3.org/TR/css-color-3/#svg-color) (při výběru barvy kontrolujte čitelnost nad celou paletou divergentní stupnice podkladového kartogramu)
+    <br>
+    <br>
+    <div style="text-align: center;">
+    <figure markdown>
+      ![Expression builder](../assets/Uloha2/expressionBuilder.png "Expression builder"){ width=500px }
+      <figcaption>Ukázka výrazu v Arcade pro výpočet barvy jednotlivých kandidátů</figcaption>
+    </figure>
+    </div>
     - zvolit vhodnou minimální a maximální velikost symbolu
     - přidat anotace, vytvořit legendu a dokončit layout
