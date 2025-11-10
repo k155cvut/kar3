@@ -91,10 +91,18 @@ Hlavním cílem multivariantní mapy je vizualizovat statistické nebo geografic
     - k vrstvě obcí přidáme data o vítězi prvního kola z [databáze ČSÚ](https://vdb.czso.cz/vdbvo2/faces/cs/index.jsf?page=vystup-objekt-parametry&z=T&f=TABULKA&sp=A&skupId=5033&katalog=34015&pvo=VOLDPR202302-OB-OR&str=v103&v=v101__VOLKOLO__1059__1) (nutná úprava v Excelu, ke každé obci stačí vhodnou funkcí vypočíst jméno vítěze 1. kola prezidentské volby)
     - dále se ujistíme, že vrstva obsahuje volební účast (za 2. kolo v %) a počet hlasujících voličů
     - tuto vrstvu převedeme pomocí *Feature to point* na bodovou vrstvu
-    - v atributové tabulce přidáme sloupec typu text: bude obsahovat textový přepis volební účasti zaokrouhlený na 1 desetinné místo
-    - primární symboliku nastavit na *Graduated symbols*, přičemž samotný znak (*Template*) nastavit na *Text Marker* (kategorie ArcGIS 2D)
+    - primární symbologii nastavit na *Graduated symbols*, přičemž samotný znak (*Template*) nastavit na *Text Marker* (kategorie ArcGIS 2D)
     - v symbologii povolit *Allow symbol property connections*
-    - ve vlastnostech symbolu nastavit propojení *Text string* s atributem obsahujícím textový přepis procent volební účasti; poté definovat vhodné velikosti pro každou kategorii, font, halo, apod.
+    - ve vlastnostech symbolu definovat *Text string* s využitím *Expression builderu* výrazem obsahujícím textový přepis procent volební účasti zaokrouhlený na 1 desetinné místo s desetinnou čárkou
+    <br>
+    <br>
+    <div style="text-align: center;">
+    <figure markdown>
+      ![Expression builder](../assets/Uloha2/expressionBuilder2.png "Expression builder"){ width=500px }
+      <figcaption>Ukázka výrazu v Arcade pro výpis zaokrouhlené volební účasti ve 2. kole</figcaption>
+    </figure>
+    </div>
+    - poté definovat vhodnou velikost pro každou kategorii, font, halo, apod.
     - ve vlastnostech symbolu definovat *Color* pomocí *Expression builderu* podmínkou, která k vítězi 1. kola přiřadí vybraný [název barvy](https://www.w3.org/TR/css-color-3/#svg-color) (při výběru barvy kontrolujte čitelnost nad celou paletou divergentní stupnice podkladového kartogramu)
     <br>
     <br>
