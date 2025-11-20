@@ -2,9 +2,9 @@
 
 ## Zadání 
 
-Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifikačního kartogramu (Mapa 1). Hlavní náplní cvičení však bude tvorba plošné anamorfózy – geografické spojité (Mapa 2) a schematické, tzv. Dorlingovy anamorfózy (Mapa 3). Vzhledem k tomu, že v ArcGIS Pro dosud neexistuje nástroj pro tvorbu plošné geografické spojité anamorfózy (Mapa 2), budeme tuto část úlohy řešit v QGIS. Postup tvorby kartogramu (Mapa 1) a ostatních typů anamorfózy (Mapa 2 a 3) bude představen v ArcGIS Pro, stejně jako finální kompozice map. Na závěr si ukážeme tvorbu multivariantní mapy (Mapa 4).
+Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifikačního kartogramu (Mapa 1). Hlavní náplní cvičení však bude tvorba plošné anamorfózy – geografické spojité (Mapa 2) a schematické, tzv. Dorlingovy anamorfózy (Mapa 3). Na závěr si ukážeme tvorbu multivariantní mapy (Mapa 4).
 
-**S využitím software QGIS či ArcGIS vytvořte čtyři autorské koncepty tematických map na papír velikosti A4.**
+**S využitím software ArcGIS Pro vytvořte čtyři autorské koncepty tematických map na papír velikosti A4.**
 
 **Mapa 1** bude s využitím jednoduchého kvalifikačního/klasifikačního kartogramu zobrazovat vybraný jev (**náskok vítěze v %**) dle obcí pro vybrané ORP (dle individuálního zadání, viz níže)
 
