@@ -91,7 +91,7 @@ __Ing. Tomáš Janata, Ph.D.__ | __prof. Ing. Jiří Cajthaml, Ph.D.__
 
 ## Šabolona TZ {: style="margin-bottom:0;"}
 
-[<span>Template</span><br>LaTeX](../docs/assets/titulka_TZ_latex.zip){ .md-button .md-button--primary .server_name .external_link_icon_small target="\_blank"} 
+[<span>Template</span><br>LaTeX](../assets/titulka_TZ_latex.zip){ .md-button .md-button--primary .server_name .external_link_icon_small target="\_blank"} 
 
 
 <!--
