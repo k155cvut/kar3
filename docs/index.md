@@ -89,6 +89,11 @@ __Ing. Tomáš Janata, Ph.D.__ | __prof. Ing. Jiří Cajthaml, Ph.D.__
 11. Trendy v GIS – 3D aplikace, streetview, cloud, crowdsourcing
 12. Prezentace semestrální práce
 
+## Šabolona TZ {: style="margin-bottom:0;"}
+
+[<span>Template</span><br>LaTeX](../docs/assets/titulka_TZ_latex.zip){ .md-button .md-button--primary .server_name .external_link_icon_small target="\_blank"} 
+
+
 <!--
 ## Harmonogram {: style="margin-bottom:0;"}
 
