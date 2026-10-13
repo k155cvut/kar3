@@ -4,7 +4,7 @@
 
 **Zpracujte trojici map zadaného okresu, která bude zobrazovat:**
 
-- **mapa I**: stav plynofikace, napojení na kanalizaci a způsob vytápění stavebních objektů \[areálová metoda; elektronicky\];
+- **mapa I**: vybrané technicko-hospodářské jevy o budovách dle RÚIAN \[areálová metoda; elektronicky\];
 - **mapa II**: ohniska rekreace v okresech \[metoda intenzity jevu; formát A4\];
 - **mapa III**: hustota obyvatelstva \[dasymetrická metoda; formát A3\]. 
 
@@ -30,22 +30,27 @@
     -   16 – Beroun
     -   17 – Blansko
     -   18 – Svitavy
-    -   \<volné\> – Hradec Králové
+    -   19 – Česká Lípa
+    -   20 – Český Krumlov
+    -   21 – Hradec Králové
+    -   22 – Litoměřice
+    -   23 – Mladá Boleslav
+    -   24 – Bruntál
     
 
 Využijte data RÚIAN, do kterého se z katastru nemovitostí přenášejí mj. údaje o parcelách a stavebních objektech (v příp. ArcGIS Pro možno využít službu ArcGIS serveru na [***ags.cuzk.cz \> RUIAN \> Prohlizeci sluzba nad daty RUIAN***](http://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer){target="_blank"}, kterou je možné stáhnout pomocí *Select* za vybrané území okresu, příp. nastavte *Processing Extent* v *Environments*).
 
-Mapu I zpracujte jako WebMap publikovanou na ArcGIS Online. Dílčí vrstvy publikujte dle potřeby jako Feature Layer nebo Tile Layer (*Share \> Web Layer*). Mapy II a III budou formou klasického mapového layoutu na formát A4, resp. A3.
+Mapu I zpracujte jako WebMap publikovanou na ArcGIS Online. Dílčí vrstvy publikujte dle potřeby jako Feature Layer nebo Tile Layer (*Share \> Web Layer*). Mapy II a III budou odevzdány tištěné formou klasického mapového layoutu na formát A4, resp. A3.
 
 **Mapa I**
 
 Jako podklad použijte vhodnou podkladovou mapu (ZTM10, ZABAGED, vrstvy basemap z AG Online či jinou dle svého uvážení), příp. doplňte základními vrstvami typu komunikace apod., lze převzít např. z DATA50 (na disku S: pod katedrou ve složce Data\\ArcGIS).
-Ve třech samostatných zapínatelných vrstvách publikujte plynofikaci, kanalizaci a vytápění za jednotlivé objekty, vhodně vizualizujte jev divergentní barevnou stupnicí, aby bylo zřejmé splnění/nesplnění jevu, příp. různé možnosti (u vytápění).
+Ve jedné skupinové vrstvě s exkluzivní viditelností publikujte plynofikaci, kanalizaci a vytápění za jednotlivé objekty, vhodně vizualizujte jev divergentní barevnou stupnicí, aby bylo zřejmé splnění/nesplnění jevu, příp. různé možnosti (u vytápění). Přidejte výpis počtu bytů uvnitř budovy a počtu pater formou měnící se lemovky budovy (attribute-driven symbology).
 
 **Mapa II**
 
 Jako podklad použijte vhodnou mapu v potlačených barvách.
-Mapa bude obsahovat lesní prostory (použijte např. Data50), vhodně vizualizované – šrafurou, tečkováním apod. Nad podkladem budou rekreační objekty vizualizované formou tzv. metody intenzity jevu (heat-map). 
+Mapa bude obsahovat jako podklad lesní prostory (použijte např. Data50), vhodně vizualizované – šrafurou, tečkováním apod. Nad podkladem budou rekreační objekty vizualizované formou tzv. metody intenzity jevu (heat-map).
 
 Pro intenzitní mapu využijeme stavební objekty z předchozí mapy. Zajímat nás budou budovy dvou typů:<br />
 stavba pro rodinnou rekreaci – dle číselníku využití stav. objektů **kód 8** a <br />
@@ -114,5 +119,5 @@ Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé
     -  Do Moodle vložit Mapu II, resp. III jako PDF ve formátu A4, resp. A3 včetně všech kompozičních prvků.
     -  Technickou zprávu není třeba zpracovat.
 
-    **Termín odevzdání**: pátek 27. prosince 2024, 16 hodin.
+    **Termín odevzdání**: úterý 3. listopadu 2026, 16 hodin.
 
