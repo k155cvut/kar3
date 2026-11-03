@@ -39,7 +39,7 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 **Jednotlivá zadání**
 
--   viz [**tabulka**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=1292987354){target="_blank"}
+-   viz [**tabulka**](https://docs.google.com/spreadsheets/d/1ytxR72QR3mrBjI2v-6EK-K4Xq2qcoY8_1jWPGWSc0HU/edit?usp=sharing){target="_blank"}
 
 **Zdroje dat:**
 
