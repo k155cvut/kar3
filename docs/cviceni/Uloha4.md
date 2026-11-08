@@ -106,11 +106,20 @@ Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tito do d�
 Pokud všechny váhy v dané ZSJ neexistují (což nastane většinou), je potřeba pomocí funkce *Summarize Within* přepočítat aktuální váhy vůči součtu těch, které v dané ZSJ jsou přítomné. Tedy např. při vahách jen 0,02 a 0,05 vydělit váhy 0,02 a 0,05 jejich součtem, tedy 0,07. Vzniknou tak normované váhy 0,286 a 0,714. Těmi pak lze násobit počty obyvatel v každém dílu a zjistit odhad skutečného rozložení obyvatel v ploše.
 Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako *Summary features* vrstvu dílů, kde jako statistiku zvolíte *Sum* (součet). Tím získáte součet vah, nutný pro přepočet vah v atributu *VAHA*. Celkový součet vah rovný jedné se totiž vyskytne jen málokdy (muselo by se v dané ZSJ objevit všech šest typů ploch dle CORINE) a pokud byste přepočítali obyvatele takto chybějícími vahami, stalo by se, že by se celkový součet obyvatel v ZSJ snížil (někteří obyvatelé odpovídající podílu vah chybějícímu do jedničky by zmizeli).
 
-Z funkce _Summarize Within_ tedy vypadne nová vrstva, obsahující díly ZSJ/CLC, původní váhy a nové normované váhy. Nyní je třeba pomocí _Join Field_ připojit atribut s normovanými vahami zpět k vrstvě s počty obyvatel. Ve výsledku máte tedy k dispozici vrstvu dílů ZSJ/CLC, pro každý z nich počet obyvatel (přešel sem z původní vrstvy ZSJ), normovanou váhu (připojila se z vrstvy vzniklé funkcí _Summarize Within_) a plochu (*SHAPE_Area*). 
+Z funkce _Summarize Within_ tedy vypadne nová vrstva, obsahující ZSJ, původní váhy a součet vah v ZSJ. Nyní je třeba pomocí _Join Field_ připojit atribut se součtem vah zpět k vrstvě s počty obyvatel (na základě shody kódu ZSJ – součet vah je jen jeden pro celou ZSJ, ale bude potřeba pro přepočet každé jednotlivé váhy v dílu). Předposledním výpočetním krokem je v _Calculate Field_ výše zmíněný přepočet typu `NORM_VAHA = VAHA / SOUCET_VAH`.
+
+Ve výsledku máte tedy k dispozici vrstvu dílů ZSJ/CLC, pro každý z nich počet obyvatel (přešel sem z původní vrstvy ZSJ), normovanou váhu (spočítali jste z původní váhy dílu a sumy připojené z vrstvy vzniklé funkcí _Summarize Within_) a plochu (*SHAPE_Area*). 
 
 Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený jedním milionem z důvodu přepočtu na čtvereční kilometr. Díly s nulovou hustotou zůstanou zcela bílé. 
 
 Můžete hustoty napočítat do nového atributu, kam pomocí _Calculate Field_ spočítáte `!POCET_OBYV! * !NORM_VAHA! / !SHAPE_Area! * 1000000` nebo vložíte tento kód jako hodnotu do dynamického vykreslení v panelu _Symbology_ (typ Graduate Colors, ikonka s chí napravo od _Field_ – zde je jiná syntaxe, tedy něco jako `$feature.POCET_OBYV * $feature.NORM_VAHA / $feature.SHAPE_Area * 1000000`). Pak můžete nastavovat symboliku i bez atributu.
+
+!!! bug "Pozor na topologické chyby"
+
+    Pozor, někdy se stane, že vinou nějakých topologických nedokonalostí se ve vrstvě vzniklé z _Union_ objeví drobné geometrie (štěpy, podlouhlé chybové díly o mizivé šířce, ale velké délce), na kterých může kolabovat funkce _Summarize Within_ nebo jiné kroky výpočtu. Ověřte tedy, že nemáte ve vrstvě dílů žádné drobné, chybové plochy menší než cca 10–20 m². Pokud tam takové jsou, klidně je bez milosti smažte. Fuknce _Summarize within_ nesmí ukázat v žádné ZSJ součet vah vyšší než 1.
+    Také hodnoty blízké 1, ale vinou zaokrouhlení menší – např. 0,9999841 –, přepište ručně na 1.
+    Jako vhodná kontrola může být opětovné posčítání obyvatel v ZSJ přepočítaných pomocí normovaných vah. Jejich opětovný součet pomocí _Sum_ v _Summarize Within_ musí samozřejmě dát hodnotu stejnou s původním počtem obyvatel.
+
 <br />
 
 <figure markdown>
