@@ -89,7 +89,10 @@ Pro plochy volte následující váhy:
 | 311 až 324    | lesní plochy                           | 0,02|
 | 332 až 512    | skály, vodní plochy a ostatní           | 0,00|
 
-Je tedy třeba sloučit tyto skupiny ploch dohromady a do nového atributu uložit příslušnou váhu. Pak pomocí funkce *Union* vytvořit průniky ZSJ a plošek CLC, čímž vzniknou díly ZSJ. Jim se pak nastaví pro každou ZSJ počty obyvatel jednotlivých dílů dle vah.
+Je tedy třeba sloučit tyto skupiny ploch dohromady a do nového atributu uložit příslušnou váhu.
+Nejsnáze to provedete označením vždy všech typů ploch dle kódu v atributovém dotazu (např. `CODE in (121, 122, 123, 124)` označí všechny industriální plochy a takto označeným pomocí _Calculate Field_ nastavíte hodnotu váhy 0,02). Takto našestkrát označíte vždy příslušné kódy dle CLC a nastavíte váhy.
+
+Pak pomocí funkce *Union* vytvořit průniky ZSJ a plošek CLC, čímž vzniknou díly ZSJ. Jim se pak nastaví pro každou ZSJ počty obyvatel jednotlivých dílů dle vah.
 
 Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tito do dílů (existují-li všechny):
 
@@ -101,9 +104,13 @@ Tedy, má-li např. hypotetická ZSJ Lhota 500 obyvatel, rozdělí se tito do d�
 - vše ostatní – 0 obyvatel.
 
 Pokud všechny váhy v dané ZSJ neexistují (což nastane většinou), je potřeba pomocí funkce *Summarize Within* přepočítat aktuální váhy vůči součtu těch, které v dané ZSJ jsou přítomné. Tedy např. při vahách jen 0,02 a 0,05 vydělit váhy 0,02 a 0,05 jejich součtem, tedy 0,07. Vzniknou tak normované váhy 0,286 a 0,714. Těmi pak lze násobit počty obyvatel v každém dílu a zjistit odhad skutečného rozložení obyvatel v ploše.
-Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako *Summary features* vrstvu dílů, kde jako statistiku zvolíte *Sum* (součet). Tím získáte součet vah, nutný pro přepočet vah v atributu *VAHA*.
+Ve funkci *Summarize Within* volte jako vstup vrstvu ZSJ a jako *Summary features* vrstvu dílů, kde jako statistiku zvolíte *Sum* (součet). Tím získáte součet vah, nutný pro přepočet vah v atributu *VAHA*. Celkový součet vah rovný jedné se totiž vyskytne jen málokdy (muselo by se v dané ZSJ objevit všech šest typů ploch dle CORINE) a pokud byste přepočítali obyvatele takto chybějícími vahami, stalo by se, že by se celkový součet obyvatel v ZSJ snížil (někteří obyvatelé odpovídající podílu vah chybějícímu do jedničky by zmizeli).
 
-Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený 1 000 000 z důvodu přepočtu na čtvereční kilometr. Díly s nulovou hustotou zůstanou zcela bílé. 
+Z funkce _Summarize Within_ tedy vypadne nová vrstva, obsahující díly ZSJ/CLC, původní váhy a nové normované váhy. Nyní je třeba pomocí _Join Field_ připojit atribut s normovanými vahami zpět k vrstvě s počty obyvatel. Ve výsledku máte tedy k dispozici vrstvu dílů ZSJ/CLC, pro každý z nich počet obyvatel (přešel sem z původní vrstvy ZSJ), normovanou váhu (připojila se z vrstvy vzniklé funkcí _Summarize Within_) a plochu (*SHAPE_Area*). 
+
+Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé jasové hodnoty jednoho odstínu barvy dle hustoty obyvatel váženého dílu). Každý díl bude vizualizovat touto stupnicí hustotu obyvatelstva, tedy přepočtený počet obyvatel z výše uvedeného postupu, dělený rozlohou a násobený jedním milionem z důvodu přepočtu na čtvereční kilometr. Díly s nulovou hustotou zůstanou zcela bílé. 
+
+Můžete hustoty napočítat do nového atributu, kam pomocí _Calculate Field_ spočítáte `!POCET_OBYV! * !NORM_VAHA! / !SHAPE_Area! * 1000000` nebo vložíte tento kód jako hodnotu do dynamického vykreslení v panelu _Symbology_ (typ Graduate Colors, ikonka s chí napravo od _Field_ – zde je jiná syntaxe, tedy něco jako `$feature.POCET_OBYV * $feature.NORM_VAHA / $feature.SHAPE_Area * 1000000`). Pak můžete nastavovat symboliku i bez atributu.
 <br />
 
 <figure markdown>
@@ -119,5 +126,6 @@ Pro vizualizaci volte obdobnou metodiku, jako by se jednalo o kartogram (různé
     -  Do Moodle vložit Mapu II, resp. III jako PDF ve formátu A4, resp. A3 včetně všech kompozičních prvků.
     -  Technickou zprávu není třeba zpracovat.
 
-    **Termín odevzdání**: úterý 3. listopadu 2026, 16 hodin.
+    **Termín odevzdání**: pátek 13. listopadu 2026, 20 hodin.
 
+****
