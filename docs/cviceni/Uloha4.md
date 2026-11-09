@@ -44,8 +44,15 @@ Mapu I zpracujte jako WebMap publikovanou na ArcGIS Online. Dílčí vrstvy publ
 
 **Mapa I**
 
-Jako podklad použijte vhodnou podkladovou mapu (ZTM10, ZABAGED, vrstvy basemap z AG Online či jinou dle svého uvážení), příp. doplňte základními vrstvami typu komunikace apod., lze převzít např. z DATA50 (na disku S: pod katedrou ve složce Data\\ArcGIS).
-Ve jedné skupinové vrstvě s exkluzivní viditelností publikujte plynofikaci, kanalizaci a vytápění za jednotlivé objekty, vhodně vizualizujte jev divergentní barevnou stupnicí, aby bylo zřejmé splnění/nesplnění jevu, příp. různé možnosti (u vytápění). Přidejte výpis počtu bytů uvnitř budovy a počtu pater formou měnící se lemovky budovy (attribute-driven symbology).
+Jako podklad použijte vhodnou podkladovou mapu (ZTM10, ZABAGED, vrstvy basemap z AG Online či jinou dle svého uvážení), příp. doplňte základními vrstvami typu komunikace apod., lze převzít např. z DATA50 (na disku S: pod katedrou ve složce Data\\ArcGIS, případně datová sada DATA50 je k dispozici i přímo na AG Online).
+
+Ve jedné skupinové vrstvě s exkluzivní viditelností publikujte plynofikaci, kanalizaci a vytápění za jednotlivé objekty, vhodně vizualizujte jev divergentní barevnou stupnicí, aby bylo zřejmé splnění/nesplnění jevu, příp. různé možnosti (u vytápění). Přidejte výpis počtu bytů uvnitř budovy (_Label_) a počtu pater formou měnící se lemovky budovy (attribute-driven symbology; budovy je třeba převést na lemovky funkcí _Feature to Line_.
+
+Z ArcGIS Pro exportujte do AG Online pouze vrstvy vektorů, nikoli podkladovou mapu. Označte vlevo v panelu obsahu všechny vektorové vrstvy, tedy min. troje budovy (s různou symbolikou) + vrstvu lemovek, obrysovou čáru okresu + případné další vrstvy vektorů, a v kontextovém menu vyberte _Sharing_ \> _Share as Web Layer_. Tím se aktivuje panel exportu jako vrstvy do AG Online. 
+
+Nově exportované položce je třeba vyplnit název (ideálně bez diakritiky a mezer), zkontrolovat, že se exportují vrstvy jako _Feature_ a dát _Analyze_. Pokud analýza vyhodí chybu (typicky např. _00374 – Unique numeric IDs_), lze ji poklikem na chybovou hlášku zpravidla odstranit (zapnout _Allow assigment of unique numeric IDs_...). Poté pomocí _Publish_ exportovat. Po úspěšném publikování se objeví zelený pruh, kde lze rovnou k vrstvě přistoupit na webu AG Online (_Manage layer_). Vypublikovanou skupinu vrstev lze pomocí tlačítka _Open in Map Viewer_ otevřít v mapové aplikaci AG Online, kam se přidá rovnou jako vrstva nebo skupina vrstev. Měly by mít zachovanou symboliku, popisy, pouze je vhodné je přejmenovat a nastavit výše zmíněnou exkluzivní viditelnost. Pro její nastavení je třeba kliknutím na tři tečky napravo od názvu vrstvy vytvořit _skupinovou vrstvu_ (_Group_), do které přesunete všechny tři vrstvy budov a v nastavení této skupinové vrstvy zaškrtnete úplně dole _Exclusive visibility_. Nezapomeňte nad budovy umístit vrstvu s lemovkou, vzešlou z _Feature to line_ a další polohopisné vrstvy. Mapa by měla také obsahovat lemovku kraje. Všechny vrstvy vhodně pojmenujte, také položky legendy mají být pojmenované (tedy ne čísla z číselníku, ale např. hodnoty _Připojení do veřejné sítě, Informce chybí_ apod.).
+
+Hotovou webmapu uložte tlačítkem _Save and open_ \> _Save As_ pod vaším jménem nebo iniciálami, rokem a názvem předmětu, tedy např. **KAR3_mapa1_Janata_2026**.
 
 **Mapa II**
 
