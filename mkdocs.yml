@@ -2,10 +2,10 @@ site_name: Kartografie 3 (155KAT3)
 nav:
   - Charakteristika předmětu: index.md
   - Cvičení:
-      - Úloha I – Digitální modely terénu: cviceni/Uloha1.md
-      - Úloha II – Pokročilé metody tematické kartografie: cviceni/Uloha2.md
-      - Úloha III – Kreativní mapa: cviceni/Uloha3.md
-      - Úloha IV – Analýza území: cviceni/Uloha4.md
+      - Úloha I – Digitální modely terénu: cviceni/DMT.md
+      - Úloha II – Kreativní mapa: cviceni/KreativniMapa.md
+      - Úloha III – Analýza území: cviceni/AnalyzaUzemi.md
+      - Úloha IV – Pokročilé metody tematické kartografie: cviceni/PokrocileMetodyTK.md
       - Úloha V - Mapová aplikace: semestralka.md
   - Tvorba DMT: dmt.md
   - Pokročilé metody TK: advanced.md

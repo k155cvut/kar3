@@ -1,4 +1,4 @@
-# Úloha II – Pokročilé metody tematické kartografie
+# Úloha IV – Pokročilé metody tematické kartografie
 
 ## Zadání 
 
@@ -39,7 +39,7 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 **Jednotlivá zadání**
 
--   viz [**tabulka**](https://docs.google.com/spreadsheets/d/1ytxR72QR3mrBjI2v-6EK-K4Xq2qcoY8_1jWPGWSc0HU/edit?usp=sharing){target="_blank"}
+-   viz [**tabulka**](https://docs.google.com/spreadsheets/d/1Tezt7SkminpWPOnZOZmR16s5dFTLifFDEuuBacQh13U/){target="_blank"}
 
 **Zdroje dat:**
 
@@ -69,7 +69,7 @@ Na úvod cvičení si zopakujeme tvorbu jednoduchého kvalifikačního/klasifika
 
 
 ## Výstupy cvičení
-Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ odevzdaná v termínu prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"}.
+Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ odevzdaná v termínu prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=476632){.color_def .underlined_dotted .external_link_icon target="_blank"}.
 
 ???+ note-grey "Požadované náležitosti technické zprávy"
     -   stručný postup řešení úlohy (použitý sw, nástroje apod.),
@@ -84,16 +84,16 @@ Povinným výstupem úlohy je __technická zpráva v elektronické podobě__ ode
 Úloha je uznána (stav splněno/nesplněno), pokud jsou splněny následující podmínky:
 
 -   úplnost technické zprávy (obsah TZ viz výše)
--   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1JDwojVnjUDCn3zh-XFYTTY4zu7iO2vEfEV0_wXXACT0/edit?gid=0){target="_blank"})
+-   splnění zásad tematické kartografie (viz [**povinná kritéria**](https://docs.google.com/spreadsheets/d/1Tezt7SkminpWPOnZOZmR16s5dFTLifFDEuuBacQh13U/edit?gid=1634882360#gid=1634882360){target="_blank"})
 
 !!! warning "Opravy"
-    V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=399548){.color_def .underlined_dotted .external_link_icon target="_blank"} vždy nejpozději do 7 dní od vrácení úlohy. Výstup lze odevzdat po __maximálně dvou opravách__, v případě pozdního odevzdání či nesprávného výstupu po druhé opravě je úloha __označena jako nesplněná__{style="color:#c22521;"}.
+    V případě, že odevzdaný výstup není správný, je vyučujícím prostřednictvím systému Moodle __vrácen k opravě__. Opravený výstup se odevzdává opět prostřednictvím systému [__Moodle__](https://moodle-vyuka.cvut.cz/mod/assign/view.php?id=476632){.color_def .underlined_dotted .external_link_icon target="_blank"} vždy nejpozději do 5 dní od vrácení úlohy. Výstup lze odevzdat po __maximálně dvou opravách__, v případě pozdního odevzdání či nesprávného výstupu po druhé opravě je úloha __označena jako nesplněná__{style="color:#c22521;"}.
 
 ## Termíny
 
-- odevzdání 1: __neděle 16. listopadu 2025__{.outlined}
-- odevzdání 2 (oprava 1): __neděle 30. listopadu 2025__{.outlined}
-- odevzdání 3 (oprava 2): __neděle 14. prosince 2025__{.outlined}
+- odevzdání 1: __neděle 29. listopadu 2026__{.outlined}
+- odevzdání 2 (oprava 1): __neděle 6. prosince 2026__{.outlined}
+- odevzdání 3 (oprava 2): __neděle 14. prosince 2026__{.outlined}
 
 
 

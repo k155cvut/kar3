@@ -1,4 +1,4 @@
-# Úloha III – Kreativní mapa
+# Úloha II – Kreativní mapa
 
 ## Zadání
 
